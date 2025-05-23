@@ -1,0 +1,5 @@
+highlight Win ctermbg=NONE
+highlight TopLine ctermbg=NONE
+highlight TopLineSel ctermbg=NONE
+highlight StatusLine ctermbg=NONE ctermfg=white
+highlight Border ctermbg=NONE
