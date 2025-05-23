@@ -1,0 +1,17 @@
+*
+!.gitignore
+
+!scripts
+!scripts/**
+!alacritty
+!alacritty/**
+!nvim
+!nvim/**
+!qutebrowser
+!qutebrowser/**
+!dunst
+!dunst/**
+!i3
+!i3/**
+!waybar
+!waybar/**

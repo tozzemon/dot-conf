@@ -1,0 +1,14 @@
+[window]
+# padding = margins around the terminal content
+padding.x = 10     # horizontal margin
+padding.y = 10     # vertical margin
+opacity = 0.9
+
+
+[font]
+normal.family = "Adwaita Mono"  # pick your nerd font
+normal.style  = "Regular"                  # style name
+size          = 11.0                      # font size in pt
+
+[colors]
+# primary = { background = "#2a2f4b", foreground = "#c5c8c6" }
