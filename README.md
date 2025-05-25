@@ -8,8 +8,8 @@ git clone https://github.com/tozzemon/dot-conf.git && cd dot-conf && mkdir -p ~/
 
 # X11 setup
 
-i3, Alacritty, Qutebrowser, NeoVim, Vifm, Dunst.
+i3, picom, Alacritty, Qutebrowser, NeoVim, Vifm, Dunst.
 
 ```bash
-git clone https://github.com/tozzemon/dot-conf.git && cd dot-conf && mkdir -p ~/.config && cp -r scripts i3 alacritty qutebrowser nvim vifm dunst ~/.config
+git clone https://github.com/tozzemon/dot-conf.git && cd dot-conf && mkdir -p ~/.config && cp -r scripts picom i3 alacritty qutebrowser nvim vifm dunst ~/.config
 ```
