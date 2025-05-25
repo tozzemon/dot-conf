@@ -52,6 +52,17 @@ set number
 set ignorecase
 set smartcase
 
+augroup TrdctlInptPrmpt
+  autocmd!
+  autocmd BufWinEnter * if expand('%:p') =~ 'tmp' |
+	\   set laststatus=0 |
+  	\   set noruler |
+        \   execute 'normal! ggdG' |
+        \   startinsert |
+        \   inoremap <buffer> jj <Esc>:wq<CR> |
+        \ endif
+augroup END
+
 "
 " Bindings
 "
@@ -66,30 +77,42 @@ nnoremap <Leader>w :VimwikiIndex<CR>
 " Check syntax group
 nnoremap <leader>st :echo synIDattr(synID(line('.'), col('.'), 1), 'name')<CR>
 
-
-
 "
 " Plugins
 "
 
+let s:is_tmp = expand('%:p') =~ '/tmp/'
+if !s:is_tmp
+  call plug#begin('~/.vim/plugged')
 
+  Plug 'vimwiki/vimwiki'
+  Plug 'chipsenkbeil/vimwiki-server.nvim', { 'tag': 'v0.1.0-alpha.5' }
+  
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
+  
+  Plug 'folke/which-key.nvim'
+  
+  Plug 'echasnovski/mini.icons'
+  Plug 'nvim-tree/nvim-web-devicons'
 
-call plug#begin()
+  call plug#end()
+endif
 
-Plug 'vimwiki/vimwiki'
-Plug 'chipsenkbeil/vimwiki-server.nvim', { 'tag': 'v0.1.0-alpha.5' }
-
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-
-Plug 'folke/which-key.nvim'
-
-Plug 'echasnovski/mini.icons'
-Plug 'nvim-tree/nvim-web-devicons'
-
-call plug#end()
-
-
+" call plug#begin()
+" 
+" Plug 'vimwiki/vimwiki'
+" Plug 'chipsenkbeil/vimwiki-server.nvim', { 'tag': 'v0.1.0-alpha.5' }
+" 
+" Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline-themes'
+" 
+" Plug 'folke/which-key.nvim'
+" 
+" Plug 'echasnovski/mini.icons'
+" Plug 'nvim-tree/nvim-web-devicons'
+" 
+" call plug#end()
 
 " Vimwiki settings
 let g:vimwiki_list = [{'path': '~/notes', 'syntax': 'markdown', 'ext': '.md'}]

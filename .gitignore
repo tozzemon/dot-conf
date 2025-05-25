@@ -17,3 +17,5 @@
 !i3/**
 !waybar
 !waybar/**
+!picom
+!picom/**

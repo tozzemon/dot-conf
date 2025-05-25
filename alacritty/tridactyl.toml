@@ -1,0 +1,16 @@
+[window]
+title = "TrdctlInptPrmpt"
+decorations = "none"
+padding.x = 10     # horizontal margin
+padding.y = 10     # vertical margin
+opacity = 1
+
+  [window.dimensions]
+  columns = 100
+  lines = 20
+
+[font]
+normal.family = "Adwaita Mono"  # pick your nerd font
+normal.style  = "Regular"                  # style name
+size          = 11.0                      # font size in pt
+
